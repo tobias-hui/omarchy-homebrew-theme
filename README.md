@@ -38,12 +38,15 @@ coral/amber accents. No blue nightclub, no magenta rain.
 
 ## Backgrounds
 
-Two generated wallpapers, tuned per display:
+Two generated wallpapers of the same scene — "Ascension": a lone figure
+stands at the base of a white-green beam of light inside an infinite field
+of falling code, the rain dissolving into luminous mist over a mirror-wet
+floor. Tuned per display:
 
-- `1-rain-city.jpg` (3440×1440, ultrawide) — a rain-soaked street under a
-  digital monsoon, the glyph rain reflecting in wet asphalt.
-- `2-code-rain.jpg` (1920×1080) — classic full-frame falling code, white-hot
-  lead characters with phosphor decay trails.
+- `1-ascension.jpg` (3440×1440, ultrawide) — full-height beam, silhouette
+  and reflection preserved.
+- `2-ascension-16x9.jpg` (1920×1080) — the same moment for a standard
+  monitor.
 
 Generated with gpt-image-2; the lock screen (`unlock.png`) reuses the same
 visual language.
