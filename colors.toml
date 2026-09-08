@@ -1,0 +1,61 @@
+# Homebrew — luvus "homebrew" theme ported to the Omarchy desktop.
+# Laser-lime CRT on near-black: authoritative values from luvus
+# src/ui/theme.rs::homebrew(), the same palette jcode mirrors in
+# ~/.jcode/config.toml [display.colors].
+
+mode = "dark"
+
+accent = "#00FF41"
+cursor = "#5EFFB0"
+selection = "#0A3A0A"
+muted = "#1E4C1E"
+
+background = "#081608"
+dark_background = "#040A04"
+darker_background = "#000000"
+lighter_background = "#0E240E"
+
+foreground = "#3CFF3C"
+dark_foreground = "#22B422"
+light_foreground = "#2EE02E"
+bright_foreground = "#5EFFB0"
+
+selection_foreground = "#5EFFB0"
+selection_background = "#0A3A0A"
+
+hyprland_active_border = "rgba(00FF41bb) rgba(1A4E1Acc) 45deg"
+hyprland_inactive_border = "rgba(0A3A0A88)"
+
+# Syntax: greens dominate; coral is the only hot alert, amber the only warm cue.
+red = "#FF6050"
+yellow = "#C8FF3C"
+orange = "#8FBF22"
+green = "#35E035"
+cyan = "#5EFFB0"
+blue = "#2EA82E"
+magenta = "#9AC86A"
+brown = "#2A3A28"
+
+bright_red = "#FF8070"
+bright_yellow = "#D8FF6A"
+bright_green = "#5EFF5E"
+bright_cyan = "#8EFFC8"
+bright_blue = "#4EC84E"
+bright_magenta = "#B8E88A"
+
+color0 = "#081608"
+color1 = "#FF6050"
+color2 = "#35E035"
+color3 = "#C8FF3C"
+color4 = "#2EA82E"
+color5 = "#9AC86A"
+color6 = "#5EFFB0"
+color7 = "#3CFF3C"
+color8 = "#1E4C1E"
+color9 = "#FF8070"
+color10 = "#5EFF5E"
+color11 = "#D8FF6A"
+color12 = "#4EC84E"
+color13 = "#B8E88A"
+color14 = "#8EFFC8"
+color15 = "#5EFFB0"
