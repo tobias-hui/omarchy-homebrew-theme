@@ -48,8 +48,54 @@ floor. Tuned per display:
 - `2-ascension-16x9.jpg` (1920×1080) — the same moment for a standard
   monitor.
 
-Generated with OpenAI image generation and refined through reference editing;
-the lock screen (`unlock.png`) reuses the same visual language.
+## How the art is made
+
+Two stages, because image models cannot set type:
+
+1. **Plate** — the native ChatGPT image lane (Codex `imagegen` skill,
+   subscription-billed) produces the atmosphere only: the black void, the pale
+   green beam, the silhouette, and the reflective floor. The plates are kept in
+   `tools/plates/`.
+2. **Typography** — `tools/render_wallpaper.py` suppresses the plate's
+   model-drawn "code" (which comes back as unreadable blobs) and renders every
+   falling character deterministically with JetBrains Mono at the final
+   resolution, in three depth layers with real binary and hexadecimal glyphs.
+
+Re-render the assets with:
+
+```sh
+python tools/render_wallpaper.py \
+  --plate tools/plates/ascension-ultrawide-plate.png \
+  --out backgrounds/1-ascension.jpg --width 3440 --height 1440 --seed 33
+python tools/render_wallpaper.py \
+  --plate tools/plates/ascension-16x9-plate.png \
+  --out backgrounds/2-ascension-16x9.jpg --width 1920 --height 1080 --seed 33
+```
+
+Needs `pillow` and `numpy`. The lock screen (`unlock.png`) reuses the 16:9
+render.
+
+## Applying a change to a running desktop
+
+Editing the files is not enough. The shell keeps the decoded background in
+memory keyed by path, so replacing an image in place changes nothing on screen.
+Worse, `omarchy-shell` IPC fails silently when the calling shell has no session
+environment: `omarchy theme bg set` then reports success while the old image
+stays up.
+
+Force the reload with the session environment set:
+
+```sh
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+export HYPRLAND_INSTANCE_SIGNATURE=$(basename "$(ls -d /run/user/$(id -u)/hypr/* | head -1)")
+export WAYLAND_DISPLAY=wayland-1
+omarchy theme set homebrew
+omarchy theme bg set "$HOME/.config/omarchy/themes/homebrew/backgrounds/1-ascension.jpg"
+```
+
+Verify with a capture of an empty workspace rather than trusting the command's
+exit code (`grim -o DP-3 out.png`); the wallpaper is hidden behind windows on
+any occupied workspace.
 
 ## Credits
 
