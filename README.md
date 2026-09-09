@@ -48,8 +48,8 @@ floor. Tuned per display:
 - `2-ascension-16x9.jpg` (1920×1080) — the same moment for a standard
   monitor.
 
-Generated with gpt-image-2; the lock screen (`unlock.png`) reuses the same
-visual language.
+Generated with OpenAI image generation and refined through reference editing;
+the lock screen (`unlock.png`) reuses the same visual language.
 
 ## Credits
 
