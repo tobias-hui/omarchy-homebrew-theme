@@ -72,8 +72,8 @@ python tools/render_wallpaper.py \
   --out backgrounds/2-ascension-16x9.jpg --width 1920 --height 1080 --seed 33
 ```
 
-Needs `pillow` and `numpy`. The lock screen (`unlock.png`) reuses the 16:9
-render.
+Needs `pillow` and `numpy`. The boot splash stays on Omarchy's default
+Plymouth theme.
 
 ## Applying a change to a running desktop
 
